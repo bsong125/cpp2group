@@ -7,7 +7,7 @@
 
     CS 250
     Assignment 01 - Array Duplicates
-/
+*/
 #ifndef FUNCTIONH
 
 #define FUNCTIONH
@@ -42,7 +42,7 @@ void deleteDuplicates(int a[], int& numOfElements)
 /
     @param a is an array that user pass it in to print.
     @param numOfElements is the size of the array.
-*/
+
 // Your code here...
 void printArray(const int a[], const int numOfElements)
 {
