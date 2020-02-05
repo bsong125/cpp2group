@@ -13,10 +13,10 @@
 #define FUNCTIONH
 
 // Definition function deleteDuplicates
-/
+/*
     @param a is an array that user pass it in to remove the duplicated elements.
     @param numOfElements is the size of the array.
-/
+*/
 // Your code here...
 void deleteDuplicates(int a[], int& numOfElements)
 {
@@ -39,10 +39,10 @@ void deleteDuplicates(int a[], int& numOfElements)
 
 
 // Definition function printArray
-/
+/*
     @param a is an array that user pass it in to print.
     @param numOfElements is the size of the array.
-
+*/
 // Your code here...
 void printArray(const int a[], const int numOfElements)
 {
