@@ -21,11 +21,11 @@ public:
 		const std::string& pokemonFirstType);
 	Pokemon(const std::string& pokemonName, int pokemonNumber, 
 		const std::string& pokemonFirstType, const std::string& pokemonSecondType);
-	std::string getType1();
-	std::string getType2();
+	std::string getType1() const;
+	std::string getType2() const;
 	
-	bool commonType(Pokemon& comparedType) const;
-	void print();
+	bool commonType(const Pokemon& comparedType) const;
+	void print() const;
 	
 	~Pokemon();
 

@@ -17,39 +17,47 @@ using namespace std;
 
 Pokemon::Pokemon()
 {
-	pokemonName = "Not determined yet";
 	pokemonNumber = 0;
-	pokemonFirstType = "Not determined yet";
-	pokemonSecondType = "Not determined yet";
 }
 
-Pokemon::Pokemon(const string& pokemonName, int pokemonNumber,
-	const std::string& pokemonFirstType)
+Pokemon::Pokemon(const string& newPokemonName, int newPokemonNumber,
+	const string& newPokemonFirstType)
 {
-
+	pokemonName = newPokemonName;
+	pokemonNumber = newPokemonNumber;
+	pokemonFirstType = newPokemonFirstType;
 }
 
-Pokemon::Pokemon(const string& pokemonName, int pokemonNumber,
-	const std::string& pokemonFirstType, const std::string& pokemonSecondType)
+Pokemon::Pokemon(const string& newPokemonName, int newPokemonNumber,
+	const string& newPokemonFirstType, const string& newPokemonSecondType)
 {
-
+	pokemonName = newPokemonName;
+	pokemonNumber = newPokemonNumber;
+	pokemonFirstType = newPokemonFirstType;
+	pokemonSecondType = newPokemonSecondType;
 }
-string Pokemon::getType1()
+string Pokemon::getType1() const
 {
-
+	return pokemonFirstType; 
 }
-string Pokemon::getType2()
+string Pokemon::getType2() const
 {
-
+	return pokemonSecondType;
 }
 
-bool Pokemon::commonType(Pokemon& comparedType) const
+bool Pokemon::commonType(const Pokemon& comparedType) const
 {
-
+	if ((pokemonFirstType == comparedType.getType1()) || 
+		(pokemonFirstType == comparedType.getType2()))return true;
+	else if ((pokemonSecondType == comparedType.getType1()) || 
+		(pokemonFirstType == comparedType.getType2())) return true;
+	return false;
 }
-void Pokemon::print()
+
+void Pokemon::print() const
 {
-
+	cout << pokemonName << ": " << pokemonFirstType << " " << pokemonSecondType << endl;
 }
 
-~Pokemon();
+Pokemon::~Pokemon()
+{}
