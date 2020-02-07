@@ -2,31 +2,27 @@
     Nguyen, Frank
     Song, Jung Hoon
     Diep, Vu
+    Vuong, Anh
+    Zhoung, Alex
 
     February 3, 2020
 
     CS 250
     Assignment 01 - Array Duplicates
 */
-#ifndef FUNCTIONH
 
-#define FUNCTIONH
+#ifndef FUNCTION_H
+#define FUNCTION_H
 
 // Definition function deleteDuplicates
-/*
-    @param a is an array that user pass it in to remove the duplicated elements.
-    @param numOfElements is the size of the array.
-*/
-// Your code here...
 void deleteDuplicates(int a[], int& numOfElements)
 {
     for (size_t i = 0; i < numOfElements; i++)
     {
-        for (size_t j = (i + 1); j < numOfElements; j++)            //pick up a number on the right and compare to the rest elements of the array
+        for (size_t j = (i + 1); j < numOfElements; j++)      
         {
             if (a[i] == a[j])
             {
-
                 for (size_t k = j; k < (numOfElements - 1); k++)
                     a[k] = a[k + 1];
                 numOfElements--;
@@ -36,16 +32,11 @@ void deleteDuplicates(int a[], int& numOfElements)
     }
 }
 
-
-
 // Definition function printArray
-/*
-    @param a is an array that user pass it in to print.
-    @param numOfElements is the size of the array.
-*/
-// Your code here...
 void printArray(const int a[], const int numOfElements)
 {
+    if (numOfElements == 0)
+        cout << "Array is empty.";
     for (size_t i = 0; i < numOfElements; i++)
         cout << a[i] << ' ';
 }
