@@ -47,16 +47,15 @@ string Pokemon::getType2() const
 
 bool Pokemon::commonType(const Pokemon& comparedType) const
 {
-	if ((pokemonFirstType == comparedType.getType1()) || 
-		(pokemonFirstType == comparedType.getType2()))return true;
-	else if ((pokemonSecondType == comparedType.getType1()) || 
-		(pokemonFirstType == comparedType.getType2())) return true;
-	return false;
+	return ((comparedType.getType1() == pokemonFirstType) ||
+		   ((comparedType.getType2() == pokemonSecondType) && !comparedType.getType2().empty()) ||
+		   (comparedType.getType1() == pokemonSecondType) || 
+		   (comparedType.getType2() == pokemonFirstType));
 }
 
 void Pokemon::print() const
 {
-	cout << pokemonName << ": " << pokemonFirstType << " " << pokemonSecondType << endl;
+	cout << pokemonName << ": " << pokemonFirstType << " " << pokemonSecondType;
 }
 
 Pokemon::~Pokemon()

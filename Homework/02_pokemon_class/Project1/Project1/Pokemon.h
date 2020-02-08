@@ -18,9 +18,9 @@ class Pokemon
 public:
 	Pokemon();
 	Pokemon(const std::string& pokemonName, int pokemonNumber, 
-		const std::string& pokemonFirstType);
+		    const std::string& pokemonFirstType);
 	Pokemon(const std::string& pokemonName, int pokemonNumber, 
-		const std::string& pokemonFirstType, const std::string& pokemonSecondType);
+		    const std::string& pokemonFirstType, const std::string& pokemonSecondType);
 	std::string getType1() const;
 	std::string getType2() const;
 	
