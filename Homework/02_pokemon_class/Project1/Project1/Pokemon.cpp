@@ -55,7 +55,9 @@ bool Pokemon::commonType(const Pokemon& comparedType) const
 
 void Pokemon::print() const
 {
-	cout << pokemonName << ": " << pokemonFirstType << " " << pokemonSecondType;
+	cout << pokemonName << ": " 
+		 << pokemonFirstType << " " 
+		 << pokemonSecondType;
 }
 
 Pokemon::~Pokemon()
