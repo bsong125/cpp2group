@@ -10,7 +10,6 @@
 */
 
 #include "Pokemon.h"
-
 #include <iostream>
 
 using namespace std;
@@ -19,7 +18,6 @@ Pokemon::Pokemon()
 {
 	pokemonNumber = 0;
 }
-
 Pokemon::Pokemon(const string& newPokemonName, int newPokemonNumber,
 	const string& newPokemonFirstType)
 {
@@ -44,13 +42,11 @@ string Pokemon::getType2() const
 {
 	return pokemonSecondType;
 }
-
 bool Pokemon::commonType(const Pokemon& comparedType) const
 {
 	return ((comparedType.getType1() == pokemonFirstType) ||
 		   ((comparedType.getType2() == pokemonSecondType) && !comparedType.getType2().empty()) ||
-		   (comparedType.getType1() == pokemonSecondType) || 
-		   (comparedType.getType2() == pokemonFirstType));
+		   (comparedType.getType1() == pokemonSecondType));
 }
 
 void Pokemon::print() const
@@ -59,6 +55,5 @@ void Pokemon::print() const
 		 << pokemonFirstType << " " 
 		 << pokemonSecondType;
 }
-
 Pokemon::~Pokemon()
 {}
