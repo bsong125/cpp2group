@@ -3,7 +3,7 @@
     Song, Jung Hoon
     Diep, Vu
     Vuong, Anh
-    Zhoung, Alex
+    Zhao, Xiangjun
 
     February 3, 2020
 
@@ -33,7 +33,7 @@ void deleteDuplicates(int a[], int& numOfElements)
 }
 
 // Definition function printArray
-void printArray(const int a[], const int numOfElements)
+void printArray(const int a[], int numOfElements)
 {
     if (numOfElements == 0)
         cout << "Array is empty.";
